@@ -1,0 +1,51 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 320px;
+  height: 320px;
+  position: relative;
+}
+
+.block {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  background-color: red;
+  animation: moveAndChangeColor 8s ease-in-out infinite;
+}
+
+@keyframes moveAndChangeColor {
+  0%,
+  5% {
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+  25%,
+  30% {
+    top: 250px;
+    left: 0;
+    background-color: blue;
+  }
+  50%,
+  55% {
+    top: 250px;
+    left: 250px;
+    background-color: green;
+  }
+  75%,
+  80% {
+    top: 0;
+    left: 250px;
+    background-color: yellow;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+}
